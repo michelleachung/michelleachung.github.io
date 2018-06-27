@@ -1,0 +1,45 @@
+/* applies to whole webpage */
+* {
+  font-size: 15px;
+  background-color: pink
+}
+
+/* applies to only div tag*/
+div{
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 2px;
+}
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+button {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: salmon;
+}
+
+/* applies only to the div with the id "border" */
+#border{
+  border-style: solid;
+  border-color: black
+}
+
+#colorful{
+  color: black;
+}
+#instagram{
+  border-style: groove;
+  font-size: 25px
+}
