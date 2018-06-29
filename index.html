@@ -4,11 +4,43 @@
   <head>
     <script src="javademo.js"></script>
     <link rel= "stylesheet" type= "text/css" href= "cssdemo.css">
+    <title>Michelle's Welcome Site</title>
   </head>
   <body>
   <center>
     <h1> <strong> Welcome! </strong> </h1>
-    <button onclick= "welcome()">Click to go to my website!</button>
-  </center>
+      <body>
+        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+        <!--<div id="player"></div>--->
+        <div id="ytplayer"></div>
+    <p>
+    <script>
+    function welcome() {
+      window.open("htmldemoo.html")
+    }
+      // Load the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // Replace the 'ytplayer' element with an <iframe> and
+      // YouTube player after the API code downloads.
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('ytplayer', {
+          height: '360',
+          width: '640',
+          videoId: 'CcsUYu0PVxY'
+        });
+      }
+    </script>
+
+        <button onclick= "welcome()">Click to go to my website!</button>
+        </center>
+      </body>
+    </html>
+
+  <!-- </center>
   </body>
-</html>
+</html> -->
